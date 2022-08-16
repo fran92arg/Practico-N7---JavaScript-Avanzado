@@ -1,13 +1,28 @@
 function Queue() {
     // Implementa la clase Queue
     // enqueue:   Agrega un valor a la queue.   Respeta el orden existente.
-    // dequeue:   Remueve un valor de la queue.   Obedece a FIFO y respeta el underflow (cuando la queue tiene size cero, o sea, cuando no tiene ningún elemento).
+    // dequeue:   Remueve un valor de la queue.   Obedece a FIFO y respeta el underflow 
+    //(cuando la queue tiene size cero, o sea, cuando no tiene ningún elemento).
     // size:   Devuelve el número de elementos que contiene la queue.
     this.array = [];
+    Queue.prototype.enqueue=function(num){
+        return this.array.push(num)
+    }
+    Queue.prototype.size=function(){
+        return this.array.length
+    }
+    Queue.prototype.dequeue=function(){
+        if(this.array.length>0){
+            return this.array.shift()
+        }else return -1
+    }
 }
-
-
-
+// var prueba=new Queue
+// prueba.enqueue(2)
+// prueba.enqueue(3)
+// prueba.dequeue()
+// console.log("largo:",prueba.size())
+// console.log(prueba)
 function cardGame() {
     // Implementar la función cardGame: a partir de dos Queue que va a recibir como paráemtros tiene
     // que determinar quién será el ganador del juego de cartas. Las reglas de dicho juego son las siguientes:
