@@ -1,13 +1,24 @@
 Con tus propias palabras completa las siguientes preguntas:
 
 - Pilas(Stacks)
+    Conjunto de datos similar a un arreglo, donde cada nuevo dato que almacenamos se "apila" 
+    sobre el último dato de la pila. Si necesitamos extraer un dato de la pila, el dato que 
+    se extrae es el último ingresado.
 
 - Queue(colas)
+    Conjunto de datos similar a la pila, con la diferencia de que el primer dato que se guarda
+    es el primero en ser extraído. 
 
-- enqueue
+- enqueue  
+    Operación de añadir un elemento a la cola. Se añade luego del último elemento.
 
 - dequeue
+    Operación de remover un elemento de la cola. Se remueve siempre el primer elemento.
 
 - sets
+    Conjunto de datos similar a un array, pero donde cada dato solo puede aparecer una vez.
 
 - Explica por lo menos 3 instancias de los sets.
+Set.clear()= Se borra todo el set
+Set.delete(valor)=se borra el valor indicado y retorna un booleano con el resultado de la Operación
+Set.size()= Devuelve la cantidad de valores del set
