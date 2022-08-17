@@ -79,13 +79,28 @@ function cardGame(mazoA,mazoB) {
     
 }
 mazoB=[1,2,3,4]
-mazoA=[0,1]
-cardGame(mazoA,mazoB)
-console.log("Mazo A: ",mazoA)
-console.log("Mazo B: ",mazoB)
-function sets() {
+// mazoA=[0,1]
+// cardGame(mazoA,mazoB)
+// console.log("Mazo A: ",mazoA)
+// console.log("Mazo B: ",mazoB)
+function sets(arreglo1,arreglo2) {
     // Implementa el metodo sets    
     // Usar el objeto set para obtener la cantidad de elementos iguales en dos arreglos
     // Muestra la cantidad
     // Aqui tu codigo
+    s1=new Set(arreglo1)
+    s2=new Set(arreglo2)//para eliminar los repetidos
+    var cuenta=0;
+    for(elem1 of s1){
+        for(elem2 of s2){
+            if (elem1===elem2){
+                ++cuenta
+            }
+        }
+    }
+    return cuenta
 }
+a1=[0,1,2,3]
+a2=[1,2,3,0]
+var cant=sets(a1,a2)
+console.log("Cantidad de elementos repetidos: ",cant)
